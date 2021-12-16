@@ -1,0 +1,23 @@
+body{
+    margin: 0;
+    color: #E1E3D8;
+        
+}
+.cabeca{
+    background-color: #E1E3D8;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: #82925C;
+}
+.navega{
+   background-color:#82925C;
+   width: 40%;
+   height: 50%;
+   padding:35px;
+   color: #E1E3D8;
+}
+.ico{
+    padding-right: 10px;
+}
