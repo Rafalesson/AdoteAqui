@@ -1,17 +1,43 @@
-html, body{
-    margin: 0;
-    padding: 0;
+body{
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+    font-family: Arial, Helvetica, sans-serif;
+    
 }
-ul, li{
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    font-size: 15px;
+@media screen and (max-width: 700px){
+    .titulo{
+       display: none;
+    }
+    .navega, .cabeca, ul{
+        display: flex;
+        flex-direction: column;
+    }
 }
-a{
+.cabeca{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    background-color: #EDE9D6;
+    width: 100%;
+
+}
+.navega{
+    font-size: 22px;
+    background-color: #1C8187;
+    width: 40%;
+    border-radius: 25px 2px 25px 3px;
+
+}
+a, ul{
+    display: flex;
     text-decoration: none;
-
+    color: #1C8187;
+    list-style: none;
 }
-.header
-
-
+.ico{
+    padding: 0px; 
+    padding-left: 15%;  
+    color: #EDE9D6;
+    
+}
