@@ -1,23 +1,191 @@
-body{
-    margin: 0;
-    color: #E1E3D8;
+*{
+    margin:0; 
+    padding:0;
+    box-sizing: border-box;
+}
+html, body{ 
+    border:0; 
+    background: #DCDFE4;  
+}
+a{
+    text-decoration: none;
+}
+@media screen and (max-width: 700px){
+    header .control-nav {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        display: block;
+        width: 30px;
+        padding: 5px 0;
+        border: solid #333;
+        border-width: 3px 0;
+        z-index: 2;
+        cursor: pointer;
+      }
+    
+      header .control-nav:before {
+        content: "";
+        display: block;
+        height: 3px;
+        background: #333;
+      }
+    
+      header .control-nav-close {
+        position: fixed;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        display: block;
+        z-index: 1;
+        background: rgba(0,0,0,0.4);
+        -webkit-transition: all 500ms ease;
+        transition: all 500ms ease;
+        -webkit-transform: translate(100%, 0);
+        -ms-transform: translate(100%, 0);
+        transform: translate(100%, 0);
+      }
+    
+      header nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 250px;
+        border-left: 1px solid #ccc;
+        background: #fff;
+        overflow-x: auto;
+        z-index: 2;
+        -webkit-transition: all 500ms ease;
+        transition: all 500ms ease;
+        -webkit-transform: translate(100%, 0);
+        -ms-transform: translate(100%, 0);
+        transform: translate(100%, 0);
+      }
+}
+
+header {
+    min-height: 60px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    border-bottom: 1px solid #ccc;
+    background: #CDD6B6;
+    z-index: 2;
+    
+  }
+
+  .cabeca { 
+      float: left;
+      margin-left: 20px;
+              
+    }
+  
+    .menu { 
+      float: right; 
+    }
+
+    
+    .l2, .l2 li { 
+        width: 100%; 
+        float: left; 
+        display: block; 
+        position: relative; 
+    }
+    .l2, .l2 li { 
+        width: auto; 
+    }
+    
+    header h1 {
+        padding: 10px 0 0 10px;
+      }
+      
+      header h1 a {
+        color: #333;
+      }
+      
+      header ul {
+        padding: 15px 10px 0 0;
+      }
+      
+      header li {
+        border-left: 2px solid #ccc;
         
-}
-.cabeca{
-    background-color: #E1E3D8;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    color: #82925C;
-}
-.navega{
-   background-color:#82925C;
-   width: 40%;
-   height: 50%;
-   padding:35px;
-   color: #E1E3D8;
-}
-.ico{
-    padding-right: 10px;
-}
+      }
+      
+      header li:first-child {
+        border: none;
+      }
+      
+      header li a {
+        display: block;
+        padding: 0 10px;
+        color: #999;
+        font-size: 18px;
+        line-height: 30px;
+        text-decoration: none;
+        -webkit-transition: all 300ms ease;
+        transition: all 300ms ease;
+        margin-right: 10px;
+      }
+      
+      header li a:hover {
+        color: #333;
+      }
+      
+      input#control-nav {
+        visibility: hidden;
+        position: absolute;
+        left: -9999px;
+        opacity: 0;
+      }
+
+  #control-nav:checked ~ .control-nav-close {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  
+  #control-nav:checked ~ nav {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  .galeria {
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      gap: 5px;
+      padding: 0 4vw;
+      
+  }
+
+  .item-galeria{
+    width: 334px;
+    height: 501px;  
+    border: 7px solid rgba(55,55,55,0.2);
+    box-shadow: 5px 5px 5px #333;
+    flex-grow: 1;
+  }
+
+  .item-galeria img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+  .item-galeria:hover{
+      transform: scale(0.7);
+  }
+
+  footer{
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: black;
+      font-style: italic;
+      padding: 30px;
+      margin-top: 10px;
+  }
